@@ -40,9 +40,6 @@ Le projet met en place une chaîne de confiance complète pour une image Docker 
 
 ---
 
-## 📸 Captures d'écran
-
-Toutes les captures sont disponibles dans le dossier [`captures/`](captures/).
 
 ### 🛠️ Partie 1 : Installer Harbor
 
