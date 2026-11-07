@@ -1,0 +1,6 @@
+cosign.key
+*.tar
+*.deb
+contact-api.spdx.json
+contact-api.cdx.json
+node_modules/
