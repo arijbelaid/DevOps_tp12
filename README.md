@@ -1,7 +1,7 @@
 <div align="center">
 
-# 🚀 TP12 - Software Supply Chain
-### Harbor, SBOM, Cosign & SLSA
+# 🚀 TP12 - Software Supply Chain ( Harbor, SBOM, Cosign & SLSA)
+
 
 [![Harbor](https://img.shields.io/badge/Harbor-v2.11.0-blue?style=for-the-badge&logo=docker)](https://goharbor.io/)
 [![Cosign](https://img.shields.io/badge/Cosign-v2.4.3-purple?style=for-the-badge&logo=linux)](https://docs.sigstore.dev/cosign/overview/)
@@ -11,6 +11,32 @@
 📄 **[Télécharger le rapport complet (PDF)](rapport_tp12.pdf)**
 
 </div>
+
+---
+
+## 🎯 Objectifs du TP
+
+Ce TP a pour but de sécuriser la **chaîne d'approvisionnement logicielle** (Software Supply Chain) en mettant en place les briques essentielles :
+
+- **Harbor** : Déployer un registre de conteneurs privé avec RBAC, scan de vulnérabilités (Trivy), rétention et immutabilité des tags.
+- **SBOM** : Générer un inventaire des composants (Software Bill of Materials) avec **Syft** et l'analyser avec **Grype**.
+- **Cosign** : Signer et vérifier des images avec une paire de clés (mode classique) puis en mode **Keyless** (OIDC).
+- **Attestations** : Produire et vérifier des attestations de provenance (in-toto, SLSA) dans GitHub Actions.
+- **Sécurité** : Comprendre les niveaux SLSA, le rôle d'in-toto, et simuler une attaque par écrasement de tag.
+
+---
+
+## 📝 Description
+
+Le projet met en place une chaîne de confiance complète pour une image Docker (`contact-api`) :
+1.  Construction de l'image et push dans **Harbor**.
+2.  Scan automatique des vulnérabilités avec **Trivy**.
+3.  Génération du **SBOM** (SPDX et CycloneDX) avec **Syft**.
+4.  Analyse du SBOM avec **Grype**.
+5.  Signature de l'image avec **Cosign** (paire de clés).
+6.  Attestation du SBOM (in-toto).
+7.  Signature **Keyless** et attestation de provenance dans **GitHub Actions** (SLSA).
+8.  Vérification de la signature et de l'attestation depuis la VM.
 
 ---
 
@@ -156,5 +182,5 @@ Toutes les captures sont disponibles dans le dossier [`captures/`](captures/).
 ---
 
 <div align="center">
-  <b>Fait avec ❤️ par Arij Belaid</b>
+  <b>realisée par Arij Belaid</b>
 </div>
